@@ -1,0 +1,42 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>背景圖重疊</title>
+   <style>
+     div {
+        width: 200px;
+        height: 150px;
+        }
+        .a img{
+        border: 10px solid#000000;
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+       position:absolute;
+       width:120px;
+      }
+     .b {
+        border: 10px dashed #0051ff;
+        margin: 10px;
+       overflow: hidden;
+       position: relative;
+background-image:
+ url("2.jpg"),
+ url("1.jpg");
+background-size: 60px, 50px;
+ background-repeat: space, round;
+}
+ </style>
+</head>
+<body>
+<div class="a">
+                 <img src="2.jpg">
+              <img src="1.jpg" >
+        </div>
+      <div class="b">
+
+      </div>
+
+</body>
