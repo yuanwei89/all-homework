@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人作品集</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .profile-section {
+            position: relative;
+            padding: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            animation: gradientBG 15s ease infinite;
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        .profile-image {
+            position: relative;
+            z-index: 1;
+            border: 3px solid white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+        }
+
+        .name {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* 雪花效果相關樣式 */
+        .snowflake {
+            position: fixed;
+            color: #4a90e2;
+            font-size: 1.5em;
+            font-family: Arial, sans-serif;
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+            user-select: none;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.8;
+            backdrop-filter: blur(2px);
+        }
+
+        .right-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .work-content {
+            position: relative;
+            z-index: 2;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 左側區域 -->
+    <div class="left-section">
+        <!-- 頭像和名字 -->
+        <div class="profile-section">
+            <img src="大頭照.jpg" alt="個人照片" class="profile-image">
+            <div class="name">鍾濰遠</div>
+        </div>
+
+        <!-- 每周分類 -->
+        <div class="weekly-menu">
+            <h2>每周學習</h2>
+            <div class="menu-item" data-week="week2">第二周</div>
+            <div class="menu-item" data-week="week3">第三周</div>
+            <div class="menu-item" data-week="week4">第四周</div>
+            <div class="menu-item" data-week="week5">第五周</div>
+            <div class="menu-item" data-week="week6">第六周</div>
+            <div class="menu-item" data-week="week7">第七周(放假)</div>
+            <div class="menu-item" data-week="week8">第八周</div>
+            <div class="menu-item" data-week="week9">第九周</div>
+            <div class="menu-item" data-week="week10">第十周</div>
+            <div class="menu-item" data-week="week11">第十一周</div>
+            <div class="menu-item" data-week="week12">第十二周</div>
+            <div class="menu-item" data-week="week13">第十三周</div>
+            <div class="menu-item" data-week="week14">第十四周</div>
+            <div class="menu-item" data-week="week15">第十五周</div>
+            <div class="menu-item" data-week="week16">第十六周</div>
+            <div class="menu-item" data-week="week17">第十七周</div>
+            <div class="menu-item" data-week="week18">第十八周</div>
+        </div>
+    </div>
+
+    <!-- 右側區域 -->
+    <div class="right-section">
+        <!-- 標題 -->
+        <div class="title-section">
+            <h1>我的網頁課程作品(18周)</h1>
+        </div>
+
+        <!-- 作品展示 -->
+        <div class="works-display">
+            <!-- 第二周 -->
+            <div class="work-content" id="week2">
+                <h2>第二周作品</h2>
+                <div class="work-item">
+                    <h3>作品 2-1</h3>
+                    <p>基礎語法練習</p>
+                    <a href="第二周/範例.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第三周 -->
+            <div class="work-content" id="week3">
+                <h2>第三周作品</h2>
+                <div class="work-item">
+                    <h3>作品 3-1</h3>
+                    <p>輸入格加送出按鈕</p>
+                    <a href="第三周/form.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 3-2</h3>
+                    <p>email 輸入格加一些功能按鈕</p>
+                    <a href="第三周/inputtype.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 3-3</h3>
+                    <p>帳號密碼輸入格</p>
+                    <a href="第三周/label.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 3-4</h3>
+                    <p>下拉式選單</p>
+                    <a href="第三周/select.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 3-5</h3>
+                    <p>行動電話使用意見調查表</p>
+                    <a href="第三周/phone.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第四周 -->
+            <div class="work-content" id="week4">
+                <h2>第四周作品</h2>
+                <div class="work-item">
+                    <h3>作品 4-1</h3>
+                    <p>完整表單製作 + Google 表單 + 影片自動播放功能</p>
+                    <a href="第四周/多媒體.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <div class="work-content" id="week5">
+                <h2>第五周作品</h2>
+                <div class="work-item">
+                    <h3>作品 5-1</h3>
+                    <p>Css基本教學</p>
+                    <a href="第五周/css-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 5-2</h3>
+                    <p>css-external</p>
+                    <a href="第五周/css-external.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 5-3</h3>
+                    <p>css-internal</p>
+                    <a href="第五周/CSS-internal.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 5-4</h3>
+                    <p>背景圖重疊</p>
+                    <a href="第五周/background.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 5-5</h3>
+                    <p>台南景點介紹</p>
+                    <a href="第五周/台南景點介紹1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+            
+            <!-- 第六周 -->
+            <div class="work-content" id="week6">
+                <h2>第六周作品</h2>
+                <div class="work-item">
+                    <h3>作品 6-1</h3>
+                    <p>練習1。</p>
+                    <a href="第六周/練習F1.HTML" class="work-link" target="_blank">查看作品</a>
+                </div>
+            
+                <div class="work-item">
+                    <h3>作品 6-2</h3>
+                    <p>練習2</p>
+                    <a href="第六周/練習2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+             
+                <div class="work-item">
+                    <h3>作品 6-3</h3>
+                    <p>練習3</p>
+                    <a href="第六周/練習3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+        
+                <div class="work-item">
+                    <h3>作品 6-4</h3>
+                    <p>台南介紹2</p>
+                    <a href="第六周/台南介紹2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第七周 -->
+            <div class="work-content" id="week7">
+            </div>
+
+            <!-- 第八周 -->
+            <div class="work-content" id="week8">
+                <h2>第八周作品</h2>
+                <div class="work-item">
+                    <h3>作品 8-1</h3>
+                    <p>background1。</p>
+                    <a href="第八周/background1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            
+                <div class="work-item">
+                    <h3>作品 8-2</h3>
+                    <p>background2</p>
+                    <a href="第八周/background2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+             
+                <div class="work-item">
+                    <h3>作品 8-3</h3>
+                    <p>background3</p>
+                    <a href="第八周/background3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+
+                <div class="work-item">
+                    <h3>作品 8-4</h3>
+                    <p>linear</p>
+                    <a href="第八周/linear.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+
+                <div class="work-item">
+                    <h3>作品 8-5</h3>
+                    <p>bgposition</p>
+                    <a href="第八周/bgposition.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+
+                <div class="work-item">
+                    <h3>作品 8-6</h3>
+                    <p>作業</p>
+                    <a href="第八周/HW.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+
+                <div class="work-item">
+                    <h3>作品 8-7</h3>
+                    <p>模糊練習</p>
+                    <a href="第八周/模糊.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+
+                <div class="work-item">
+                    <h3>作品 8-8</h3>
+                    <p>圓餅圖練習</p>
+                    <a href="第八周/圓餅圖.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+
+                <div class="work-item">
+                    <h3>作品 8-9</h3>
+                    <p>陰影練習</p>
+                    <a href="第八周/陰影.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第九周 -->
+            <div class="work-content" id="week9">
+                <h2>第九周作品(期中考作品)</h2>
+                <div class="work-item">
+                    <h3>作品 9-1</h3>
+                    <p>期中考作品</p>
+                    <a href="第九週html/hwhw.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十周 -->
+            <div class="work-content" id="week10">
+                <h2>第十周作品</h2>
+                <div class="work-item">
+                    <h3>作品 10-1</h3>
+                    <p>flex練習1</p>
+                    <a href="第十週.html/hw1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-2</h3>
+                    <p>flex練習2</p>
+                    <a href="第十週.html/hw2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-3</h3>
+                    <p>區塊練習3</p>
+                    <a href="第十週.html/hw3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-4</h3>
+                    <p>區塊練習4</p>
+                    <a href="第十週.html/hw4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-5</h3>
+                    <p>區塊練習5</p>
+                    <a href="第十週.html/練習5.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-6</h3>
+                    <p>區塊練習6</p>
+                    <a href="第十週.html/練習一column.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-7</h3>
+                    <p>區塊練習7</p>
+                    <a href="第十週.html/練習二reverse.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-8</h3>
+                    <p>花卉展示</p>
+                    <a href="第十週.html/last hw.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 10-9</h3>
+                    <p>九宮格分割練習</p>
+                    <a href="0424第十周/0424.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十一周 -->
+            <div class="work-content" id="week11">
+                <h2>第十一周作品</h2>
+                <div class="work-item">
+                    <h3>作品 11-1</h3>
+                    <p>字體樣式基礎設計原理</p>
+                    <a href="0430第11周/fontsyle1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 11-2</h3>
+                    <p>字體樣式進階技術與應用</p>
+                    <a href="0430第11周/fontstyle3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 11-3</h3>
+                    <p>文字視覺強調技術探索</p>
+                    <a href="0430第11周/hw1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 11-4</h3>
+                    <p>文字陰影效果與視覺深度</p>
+                    <a href="0430第11周/textshadow.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 11-5</h3>
+                    <p>字體動態變換與互動效果</p>
+                    <a href="0430第11周/font1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 11-6</h3>
+                    <p>個人心理小作業</p>
+                    <a href="0430第11周/HW.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 11-7</h3>
+                    <p>多頁面網站設計與導覽系統</p>
+                    <a href="0430第11周/練習二.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十二周 -->
+            <div class="work-content" id="week12">
+                <h2>第十二周作品</h2>
+                <div class="work-item">
+                    <h3>作品 12-1</h3>
+                    <p>練習1</p>
+                    <a href="0424第十周/week12-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 12-2</h3>
+                    <p>練習2</p>
+                    <a href="0424第十周/week12-2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 12-3</h3>
+                    <p>練習3</p>
+                    <a href="0424第十周/week12-3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 12-4</h3>
+                    <p>練習4</p>
+                    <a href="0424第十周/week12-4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十三周 -->
+            <div class="work-content" id="week13">
+                <h2>第十三周作品</h2>
+                <div class="work-item">
+                    <h3>作品 13-1</h3>
+                    <p>練習1</p>
+                    <a href="0501/week13-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 13-2</h3>
+                    <p>練習2</p>
+                    <a href="0501/week13-2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 13-3</h3>
+                    <p>練習3</p>
+                    <a href="0501/week13-3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 13-4</h3>
+                    <p>練習4</p>
+                    <a href="0501/week13-4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十四周 -->
+            <div class="work-content" id="week14">
+                <h2>第十四周作品</h2>
+                <div class="work-item">
+                    <h3>作品 14-1</h3>
+                    <p>練習1</p>
+                    <a href="0501/week14-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 14-2</h3>
+                    <p>練習2</p>
+                    <a href="0501/week14-2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 14-3</h3>
+                    <p>練習3</p>
+                    <a href="0501/week14-3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 14-4</h3>
+                    <p>練習4</p>
+                    <a href="0501/week14-4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十五周 -->
+            <div class="work-content" id="week15">
+                <h2>第十五周作品</h2>
+                <div class="work-item">
+                    <h3>作品 15-1</h3>
+                    <p>練習1</p>
+                    <a href="0501/week15-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 15-2</h3>
+                    <p>練習2</p>
+                    <a href="0501/week15-2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 15-3</h3>
+                    <p>練習3</p>
+                    <a href="0501/week15-3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 15-4</h3>
+                    <p>練習4</p>
+                    <a href="0501/week15-4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十六周 -->
+            <div class="work-content" id="week16">
+                <h2>第十六周作品</h2>
+                <div class="work-item">
+                    <h3>作品 16-1</h3>
+                    <p>練習1</p>
+                    <a href="0501/week16-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 16-2</h3>
+                    <p>練習2</p>
+                    <a href="0501/week16-2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 16-3</h3>
+                    <p>練習3</p>
+                    <a href="0501/week16-3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 16-4</h3>
+                    <p>練習4</p>
+                    <a href="0501/week16-4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十七周 -->
+            <div class="work-content" id="week17">
+                <h2>第十七周作品</h2>
+                <div class="work-item">
+                    <h3>作品 17-1</h3>
+                    <p>練習1</p>
+                    <a href="0501/week17-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 17-2</h3>
+                    <p>練習2</p>
+                    <a href="0501/week17-2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 17-3</h3>
+                    <p>練習3</p>
+                    <a href="0501/week17-3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 17-4</h3>
+                    <p>練習4</p>
+                    <a href="0501/week17-4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+
+            <!-- 第十八周 -->
+            <div class="work-content" id="week18">
+                <h2>第十八周作品</h2>
+                <div class="work-item">
+                    <h3>作品 18-1</h3>
+                    <p>練習1</p>
+                    <a href="0501/week18-1.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 18-2</h3>
+                    <p>練習2</p>
+                    <a href="0501/week18-2.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 18-3</h3>
+                    <p>練習3</p>
+                    <a href="0501/week18-3.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+                <div class="work-item">
+                    <h3>作品 18-4</h3>
+                    <p>練習4</p>
+                    <a href="0501/week18-4.html" class="work-link" target="_blank">查看作品</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 切換作品顯示的腳本
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('click', function() {
+                // 移除活動狀態
+                document.querySelectorAll('.menu-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+                this.classList.add('active');
+
+                // 顯示對應作品
+                const week = this.getAttribute('data-week');
+                document.querySelectorAll('.work-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.getElementById(week).classList.add('active');
+            });
+        });
+
+        // 預設不顯示任何作品
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.menu-item').forEach(i => i.classList.remove('active'));
+            document.querySelectorAll('.work-content').forEach(content => content.classList.remove('active'));
+
+            // 雪花效果
+            const rightSection = document.querySelector('.right-section');
+            const snowflakes = 50; // 雪花數量
+
+            for (let i = 0; i < snowflakes; i++) {
+                createSnowflake();
+            }
+
+            function createSnowflake() {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❅';
+                snowflake.style.left = Math.random() * 100 + '%';
+                snowflake.style.opacity = Math.random() * 0.5 + 0.5;  // 調整透明度範圍，使雪花更明顯
+                snowflake.style.animation = `fall ${Math.random() * 3 + 2}s linear infinite`;
+                rightSection.appendChild(snowflake);
+
+                // 當雪花落到底部時重新開始
+                snowflake.addEventListener('animationend', () => {
+                    snowflake.style.top = '-10px';
+                    snowflake.style.left = Math.random() * 100 + '%';
+                });
+            }
+        });
+
+        // 添加雪花動畫
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes fall {
+                0% {
+                    transform: translateY(-10px) rotate(0deg);
+                }
+                100% {
+                    transform: translateY(100vh) rotate(360deg);
+                }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>

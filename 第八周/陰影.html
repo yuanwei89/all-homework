@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>圖片陰影對比</title>
+  <style>
+    body {
+      background-color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: sans-serif;
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+    }
+
+    .image-box {
+      text-align: center;
+    }
+
+    .image-box img {
+      width: 200px;
+      height: auto;
+      border-radius: 10px;
+      display: block;
+    }
+
+    .shadow-none {
+      box-shadow: none;
+    }
+
+    .shadow-medium {
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+    }
+
+    .shadow-strong {
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.85);
+    }
+
+    .caption {
+      margin-top: 10px;
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-box">
+      <img src="模糊.jpg" class="shadow-none" alt="無陰影">
+      <div class="caption">無陰影</div>
+    </div>
+    <div class="image-box">
+      <img src="模糊.jpg" class="shadow-medium" alt="中度陰影">
+      <div class="caption">中度陰影</div>
+    </div>
+    <div class="image-box">
+      <img src="模糊.jpg" class="shadow-strong" alt="強烈陰影">
+      <div class="caption">強烈陰影</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>RWD響應式基礎佈局設計</title>
+  <style>
+    body {
+      background-color: #f0f0f0;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 0px; 
+      margin-top: 50px;
+    }
+    .column {
+      border: 4px solid white; 
+      background-color: cyan;
+      text-align: center;
+      width: 375px; /* 調整寬度以適應四格 */
+    }
+    .column.video-column {
+      width: 500px;
+      background-color: #ffd700;
+    }
+    .column.video-column video {
+      height: 250px;
+    }
+    .column.video-column div {
+      font-size: 24px;
+      color: #333;
+    }
+    .column div {
+      padding: 10px;
+      font-size: 18px;
+      font-weight: bold;
+      text-align: left;
+    }
+    .column img {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+      border-top: 4px solid white; 
+    }
+    .header {
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+    .title {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      word-break: break-all;
+    }
+    .menu-list {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      font-size: 20px;
+      margin-bottom: 10px;
+      list-style: none;
+      padding: 0;
+    }
+    .menu-btn {
+      display: inline-block;
+      font-size: 32px;
+      background: #22223b;
+      color: white;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="title">這是一個回應式網頁設計文字過長的範例</div>
+    <ul class="menu-list">
+      <li>選項一</li>
+      <li>選項二</li>
+      <li>選項三</li>
+      <li>選項四</li>
+      <li>選項五</li>
+      <li>選項六</li>
+    </ul>
+    <div class="menu-btn">&#9776;</div>
+  </div>
+  <div class="container">
+    <div class="column">
+      <div>鍾濰遠的紙飛機</div>
+      <img src="紙飛機5.jpg" alt="鍾濰遠的紙飛機">
+    </div>
+    <div class="column">
+      <div>羅一程</div>
+      <img src="紙飛機1.JPG" alt="玫瑰花">
+    </div>
+    <div class="column">
+      <div>王唯毓</div>
+      <img src="紙飛機2.jpg" alt="繡球花">
+    </div>
+    <div class="column">
+      <div>陳正祐</div>
+      <img src="紙飛機3.jpg" alt="百合花">
+    </div>
+    <div class="column">
+      <div>吳培凱</div>
+      <img src="紙飛機.jpg" alt="百合花">
+    </div>
+    <div class="column video-column">
+      <div>我的影片</div>
+      <video width="100%" controls>
+        <source src="紙飛機.mp4" type="video/mp4">
+        您的瀏覽器不支援影片播放。
+      </video>
+    </div>
+  </div>
+</body>
+</html>

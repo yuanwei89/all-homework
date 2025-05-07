@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業首頁</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(to bottom, #81558a, #16213e);
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .container {
+            text-align: center;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 40px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .homework-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .homework-link {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .homework-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .snowflake {
+            position: fixed;
+            color: white;
+            font-size: 1em;
+            user-select: none;
+            z-index: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>第十二週作業(RWD練習)</h1>
+        <div class="homework-links">
+            <a href="rwd-layout1.html" class="homework-link">rwd-layout1</a>
+            <a href="rwd-layout 2.html" class="homework-link">rwd-layout2</a>
+            <a href="rwd-layout 3.html" class="homework-link">rwd-layout3</a>
+            <a href="rwd-layout 4.html" class="homework-link">rwd-layout4</a>
+            <a href="rwd-layout5.html" class="homework-link">rwd-layout5</a>
+            <a href="HW.HTML" class="homework-link">RWD回應式基礎佈局設計</a>
+        </div>
+    </div>
+
+    <script>
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.innerHTML = '❄';
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.fontSize = Math.random() * 10 + 10 + 'px';
+            document.body.appendChild(snowflake);
+
+            const animation = snowflake.animate([
+                { transform: 'translateY(-10vh)' },
+                { transform: `translateY(100vh)` }
+            ], {
+                duration: Math.random() * 3000 + 5000,
+                easing: 'linear'
+            });
+
+            animation.onfinish = () => {
+                snowflake.remove();
+            };
+        }
+
+        setInterval(createSnowflake, 100);
+    </script>
+</body>
+</html>

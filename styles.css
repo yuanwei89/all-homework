@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "微軟正黑體", Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+}
+
+/* 左側區域 - 占頁面三分之一寬度 */
+.left-section {
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #70ead6;
+    border-right: 1px solid #ff0084;
+}
+
+/* 右側區域 - 占頁面三分之二寬度 */
+.right-section {
+    width: 66.67%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+/* 左上方區域 - 占左側三分之一高度 */
+.profile-section {
+    height: 33.33%;
+    padding: 20px;
+    background-color: #c4cde6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 左下方區域 - 占左側三分之二高度 */
+.weekly-menu {
+    height: 66.67%;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+/* 右上方區域 - 占右側三分之一高度 */
+.title-section {
+    height: 33.33%;
+    padding: 20px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* 右下方區域 - 占右側三分之二高度 */
+.works-display {
+    height: 66.67%;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #4b0cc2;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #555;
+    padding-left: 10px;
+    border-left: 4px solid #4CAF50;
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.menu-item {
+    padding: 12px 15px;
+    margin-bottom: 8px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-item:hover {
+    background-color: #e8f5e9;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: scale(1.05);
+}
+
+.menu-item:active {
+    transform: scale(0.95);
+}
+
+.menu-item.active {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.work-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.work-content {
+    display: none;
+}
+
+.work-content.active {
+    display: block;
+}
+
+.name {
+    font-size: 1.5rem;
+    margin-top: 5px;
+    color: #333;
+}
+
+.work-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.work-link:hover {
+    background-color: #45a049;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+} 

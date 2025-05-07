@@ -1,0 +1,17 @@
+@media only screen and (max-width: 500px) {
+  /*螢幕小於500PX，例如手機*/
+  .headline{
+    font-size: 20px;
+  }
+  .desktop-menu{
+    text-align: center;
+    display: none;
+  }
+  .mobil-menu{
+    text-align: center;
+    display: block;
+  }
+  .item{
+    width:90%
+  }
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Flex Direction 乾淨展示</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: sans-serif;
+      background-color: #f0f0f0;
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .container {
+      display: flex;
+      height: 150px;
+      background: transparent;
+      width: 100%;
+    }
+    .item {
+      background: aqua;
+      padding: 10px;
+      margin: 5px 0;
+      width: 100%;
+    }
+    .row { flex-direction: row; }
+    .row-reverse { flex-direction: row-reverse; }
+    .column { flex-direction: column; }
+    .column-reverse { flex-direction: column-reverse; }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div>
+      
+      <div class="container row">
+        <div class="item">項目1</div>
+        <div class="item">項目2</div>
+        <div class="item">項目3</div>
+      </div>
+    </div>
+    <div>
+      
+      <div class="container row-reverse">
+        <div class="item">項目1</div>
+        <div class="item">項目2</div>
+        <div class="item">項目3</div>
+      </div>
+    </div>
+    <div>
+      
+      <div class="container column">
+        <div class="item">項目1</div>
+        <div class="item">項目2</div>
+        <div class="item">項目3</div>
+      </div>
+    </div>
+    <div>
+      
+      <div class="container column-reverse">
+        <div class="item">項目1</div>
+        <div class="item">項目2</div>
+        <div class="item">項目3</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

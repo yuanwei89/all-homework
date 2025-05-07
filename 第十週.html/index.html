@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>我的八個作業作品</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #001f3f;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+      z-index: 2;
+      position: relative;
+    }
+
+    .work {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      padding: 20px;
+      text-align: center;
+      transition: background 0.3s;
+    }
+
+    .work:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .work a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      display: block;
+    }
+
+    .work a:hover {
+      text-decoration: underline;
+    }
+
+    /* 雪花效果 */
+    .snowflake {
+      position: fixed;
+      top: -10px;
+      color: white;
+      font-size: 1em;
+      user-select: none;
+      animation: fall linear infinite;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10px) rotate(0deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>作業練習 </h1>
+  <div class="grid">
+    <div class="work"><a href="練習一column.html" target="_blank">練習一:column</a></div>
+    <div class="work"><a href="練習二reverse.html" target="_blank">練習二reverse</a></div>
+    <div class="work"><a href="hw1.html" target="_blank">hw1</a></div>
+    <div class="work"><a href="hw2.html" target="_blank">hw2</a></div>
+    <div class="work"><a href="hw3.html" target="_blank">hw3</a></div>
+    <div class="work"><a href="hw4.html" target="_blank">hw4</a></div>
+    <div class="work"><a href="練習5.html" target="_blank">hw5</a></div>
+    <div class="work"><a href="last hw.html" target="_blank">last hw(p22作業)</a></div>
+  </div>
+
+  <!-- 雪花 -->
+  <script>
+    function createSnowflake() {
+      const snowflake = document.createElement("div");
+      snowflake.classList.add("snowflake");
+      snowflake.textContent = "❄";
+      snowflake.style.left = Math.random() * window.innerWidth + "px";
+      snowflake.style.animationDuration = 3 + Math.random() * 5 + "s";
+      snowflake.style.fontSize = 12 + Math.random() * 24 + "px";
+      document.body.appendChild(snowflake);
+
+      setTimeout(() => {
+        snowflake.remove();
+      }, 8000);
+    }
+
+    setInterval(createSnowflake, 200);
+  </script>
+</body>
+</html>

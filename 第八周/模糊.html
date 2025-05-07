@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>圖片模糊對比</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .container {
+      display: flex;
+      gap: 20px;
+    }
+    .image-box {
+      text-align: center;
+    }
+    .image-box img {
+      width: 250px;
+      height: auto;
+      border-radius: 10px;
+    }
+    .blur-0 {
+      filter: blur(0px);
+    }
+    .blur-3 {
+      filter: blur(3px);
+    }
+    .blur-6 {
+      filter: blur(6px);
+    }
+    .caption {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="image-box">
+      <img src="模糊.jpg" class="blur-0" alt="無模糊">
+      <div class="caption">原圖</div>
+    </div>
+    <div class="image-box">
+      <img src="模糊.jpg" class="blur-3" alt="中度模糊">
+      <div class="caption">中度模糊</div>
+    </div>
+    <div class="image-box">
+      <img src="模糊.jpg" class="blur-6" alt="高度模糊">
+      <div class="caption">高度模糊</div>
+    </div>
+  </div>
+</body>
+</html>

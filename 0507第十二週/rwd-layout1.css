@@ -1,0 +1,11 @@
+.list{
+    display:flex;
+
+
+}
+.item{
+    background-color: grey;
+    float:none;
+    width:280px;
+    margin:10px;
+}

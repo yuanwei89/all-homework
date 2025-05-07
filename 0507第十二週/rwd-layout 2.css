@@ -1,0 +1,22 @@
+.list{
+    display: flex;
+
+    justify-content: center;
+
+}
+.item{
+    background-color: pink;
+    flex:none;
+    width: 280px;
+    margin: 10px;
+}
+@media only screen and (max-width:1250px){
+
+    .list{
+        flex-wrap: wrap;
+
+    }
+    .item{
+        width: 45%
+    }
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RWD 回應是網頁切版</title>
+    <link rel="stylesheet" type="text/css" href="rwd-layout5.css">
+</head>
+<body>
+    <div class="headline">這是一個回應式網頁設計文字過長的範例</div>
+    <div class="menu">選項一，選項二，選項三，選項四，選項五，選項六</div>
+    <div class="menu-dropdown">
+        <div class="hamburger" id="hamburgerMenu">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <div class="list" id="productList" style="display: none;">
+        <div class="item">產品1</div>
+        <div class="item">產品2</div>
+        <div class="item">產品3</div>
+        <div class="item">產品4</div>
+    </div>
+
+    <script>
+        document.getElementById('hamburgerMenu').addEventListener('click', function() {
+            var productList = document.getElementById('productList');
+            if (productList.style.display === 'none') {
+                productList.style.display = 'flex';
+            } else {
+                productList.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
